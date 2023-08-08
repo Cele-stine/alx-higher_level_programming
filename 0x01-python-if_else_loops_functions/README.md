@@ -4,3 +4,5 @@ All this is masterd under this topic
 0.Positive anything is better than negative nothing
 Here we have a Python script that prints a massage based of if the random number returned is zero, a positive number or a negative number.
 Here i have used if statements and string fomatters.
+1.The last digit
+A python script that prints the last digit of a number abd the number alond side a massege
