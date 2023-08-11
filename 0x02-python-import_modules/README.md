@@ -12,3 +12,8 @@ This program imports functions from the file calculator.py, does some math and p
 
 2.How to make a skript dynammic
 This program prints the number and list of arguments(its).
+
+3.Infinite addition
+THis program prints the result of the total all arguments.
+Here i had to use the sum() function convert the arguments into float during the calculation.
+Later I converted into intrger using thr int() function to output the result as an int.
