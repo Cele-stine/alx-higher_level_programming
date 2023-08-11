@@ -9,3 +9,6 @@ This is a program that imports a function from a module and prints the result on
 
 1.My first toolbox
 This program imports functions from the file calculator.py, does some math and prints the results.
+
+2.How to make a skript dynammic
+This program prints the number and list of arguments(its).
