@@ -11,3 +11,6 @@ This program prints the items in a list one at a time.
 
 1.Secure access to an element in a list
 This functionretrives an element from a list like in c.
+
+2.Replace element.
+This function replaces an element of a list at a specific position.
