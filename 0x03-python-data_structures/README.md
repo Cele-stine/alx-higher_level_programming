@@ -8,3 +8,6 @@ Lists are mutable while tuples are immutable but a tuple could contain a list.
 
 0.Print a list of integers
 This program prints the items in a list one at a time.
+
+1.Secure access to an element in a list
+This functionretrives an element from a list like in c.
