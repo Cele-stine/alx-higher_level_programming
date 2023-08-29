@@ -1,5 +1,6 @@
 #!/usr/bin/python3
-"""Add a Private Attribute to the class Square"""
+
+"""Add a Private Attribute to the class Square."""
 
 class Square:
     def __init__(self, size):
