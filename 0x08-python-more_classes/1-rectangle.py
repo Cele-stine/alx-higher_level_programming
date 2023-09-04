@@ -24,7 +24,6 @@ class Rectangle:
     Args:
     value: the value assigned to the with of the rectangle.
     """
-
     @width.setter
     def width(self, value):
         if not isinstance (value, int):
@@ -42,7 +41,6 @@ class Rectangle:
     Args:
     value: the value assigned to the with of the rectangle.
     """
-
     @height.setter
     def height(self, value):
         if not isinstance (value, int):
