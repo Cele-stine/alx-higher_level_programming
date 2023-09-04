@@ -17,13 +17,9 @@ class Rectangle:
 
     @property
     def width(self):
+        """Getter\setter for width."""
         return self.__width
 
-    """Setter for width.
-
-    Args:
-    value: the value assigned to the with of the rectangle.
-    """
     @width.setter
     def width(self, value):
         if not isinstance (value, int):
@@ -34,13 +30,9 @@ class Rectangle:
 
     @property
     def height(self):
+        """Getter\seter for height."""
         return self.__height
 
-    """Setter for height.
-
-    Args:
-    value: the value assigned to the with of the rectangle.
-    """
     @height.setter
     def height(self, value):
         if not isinstance (value, int):
