@@ -26,18 +26,18 @@ class TestRectangle_instantiation(unittest.TestCase):
             Rectangle(2)
 
     def test_two_args(self):
-        r1 = (2, 3)
-        r2 = (5, 8)
+        r1 = Rectangle(2, 3)
+        r2 = Rectangle(3, 2)
         self.assertEqual(r1.id, r2.id - 1)
 
     def test_three_args(self):
-        r1 = (3, 5, 6)
-        r2 = (9, 10, 7)
+        r1 = Rectangle(3, 5, 6)
+        r2 = Rectangle(9, 10, 7)
         self.assertEqual(r1.id, r2.id - 1)
 
     def test_four_args(self):
-        r1 = (1, 2, 3, 4)
-        r2 = (5, 6, 7, 8)
+        r1 = Rectangle(1, 2, 3, 4)
+        r2 = Rectangle(5, 6, 7, 8)
         self.assertEqual(r1.id, r2.id - 1)
 
     def test_five_args(self):
@@ -45,7 +45,7 @@ class TestRectangle_instantiation(unittest.TestCase):
 
     def test_more_than_five_args(self):
         with self.assertRaises(TypeError):
-            Rectangle(1, 2, 4, 7, 8)
+            Rectangle(1, 2, 4, 7, 8, 5)
 
     def test_width_private(self):
         with self.assertRaises(AttributeError):
