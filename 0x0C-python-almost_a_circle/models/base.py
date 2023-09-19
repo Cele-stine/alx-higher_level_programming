@@ -17,7 +17,7 @@ class Base:
         Args:
             id: object identifier.
         """
-        
+
         if id is not None:
             self.id = id
         else:
