@@ -7,10 +7,10 @@ from models.base import Base
 class Rectangle(Base):
     """Define a class than inherits from Base.
 
-
     Args:
         Base: Class to inhetit from.
     """
+
 
     def __init__(self, width, height, x=0, y=0, id=None):
         """Inastanciate the class.
