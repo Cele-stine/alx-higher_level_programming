@@ -2,11 +2,11 @@
 """Creat class Rectangle that inherits from  Base."""
 
 
-
 from models.base import Base
 
 class Rectangle(Base):
     """Define a class than inherits from Base.
+
 
     Args:
         Base: Class to inhetit from.
