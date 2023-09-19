@@ -1,6 +1,8 @@
 #!/usr/bin/python3
 """Creat class Rectangle that inherits from  Base."""
 
+
+
 from models.base import Base
 
 class Rectangle(Base):
@@ -19,6 +21,11 @@ class Rectangle(Base):
             x: Horizontal coordinate from the top left coner of the rectangle.
             y: Vertical coordinate from the top left coner of the rectangle.
             id: Object identifier.
+
+        Raises:
+            TypeError: width, height, x, and y raise a TypeError if not int.
+            ValueError: if less or equal to zero width&height raise Valueerr.
+            ValueError: If less than zero x&y raise ValueError.
         """
 
         super().__init__(id)
@@ -28,13 +35,22 @@ class Rectangle(Base):
         self.__x = x
         self.__y = y
 
-    #set getter/setter for the attributes.
+    """Getter/setter for the private attributes."""
+
     @property
     def width(self):
+        """Getter for width."""
+
         return self.__width
 
     @width.setter
     def width(self, value):
+        """setter for width.
+
+        Args:
+            value: The new value to set width to.
+        """
+
         if type(value) != int:
             raise TypeError("width must be an integer")
         if value <= 0:
@@ -43,10 +59,18 @@ class Rectangle(Base):
 
     @property
     def height(self):
+        """Getter for height."""
+
         return self.__height
 
     @height.setter
     def height(self, value):
+        """Setter for height.
+
+        Args:
+            value: The new value to set height to.
+        """
+
         if type(value) != int:
             raise TypeError("height must be an integer")
         if value <= 0:
@@ -55,10 +79,18 @@ class Rectangle(Base):
 
     @property
     def x(self):
+        """Getter for x."""
+
         return self.__x
 
     @x.setter
     def x(self, value):
+        """Setter for x.
+
+        Args:
+            value: The new value to set x to.
+        """
+
         if type(value) != int:
             raise TypeError("x must be an integer")
         if value < 0:
@@ -67,10 +99,18 @@ class Rectangle(Base):
 
     @property
     def y(self):
+        """Getter for y."""
+
         return self.__y
 
     @y.setter
     def y(self, value):
+        """Setter for y
+
+        Args:
+            value: The new value to set y to.
+        """
+
         if type(value) != int:
             raise TypeError("y must be an integer")
         if value < 0:
@@ -79,4 +119,5 @@ class Rectangle(Base):
 
     def area(self):
         """Return the area of the rectangle."""
+
         return self.width * self.height
