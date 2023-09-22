@@ -59,3 +59,15 @@ class Base:
 
         with open(filename, "w", encoding="utf-8") as f:
             f.write(json_string)
+
+    def from_json_string(json_string):
+        """Return a list from the JSON string representation json_string.
+
+        Args:
+            json_string: a string representing a list of dintionaries.
+        """
+
+        if json_string is None or len(json_string) == 0:
+            return []
+        else:
+            return json.loads(json_string)
