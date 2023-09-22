@@ -1,0 +1,59 @@
+This is a test file for a function that divides all elements in a matrix.
+
+==================================
+HOW TO USE 2-matrix_divided.txt
+==================================
+
+Usage:
+======
+
+"matrix_divided()" takes two parameters that is the matrix(matrix) and
+a constant divisor(div).
+"matrix_divided()" returns a new matrix of rhe result from the division.
+
+::
+
+    >>> matrix_divided = __import__('2-matrix_divided').matrix_divided
+    >>> matrix = [
+    ...    [3, 6, 9],
+    ...    [12, 15, 18]
+    ... ]
+    >>> print(matrix_divided(matrix, 3))
+    [[1.0, 2.0, 3.0], [4.0, 5.0, 6.0]]
+
+
+::
+
+Note that the result is being rounded off to the nearest two decimal places.
+
+::
+
+    >>> matrix = [
+    ...    [2, 3, 4],
+    ...    [5, 6, 7]
+    ... ]
+    >>> print(matrix_divided(matrix, 3))
+    [[0.67, 1.0, 1.33], [1.67, 2.0, 2.33]]
+
+::
+
+Matrix can be of floats.
+
+::
+
+    >>> matrix = [
+    ...    [2.0, 3.2, 4.5],
+    ...    [5.4, 2.8, 3.0]
+    ... ]
+    >>> print(matrix_divided(matrix, 3))
+    [[0.67, 1.07, 1.5], [1.8, 0.93, 1.0]]
+
+Division cannot be done with a zero.
+
+::
+
+    >>> print(matrix_divided(matrix, 0))
+    Traceback (most recent last call):
+    ZeroDivisonError: division by zero
+
+::
