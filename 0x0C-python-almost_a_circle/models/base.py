@@ -71,3 +71,19 @@ class Base:
             return []
         else:
             return json.loads(json_string)
+
+    @classmethod
+    def create(cls, **dictionary):
+        """Create and return an instance with attributes set from the dictionary.
+
+        Args:
+            **dictionary: Keyword argument.
+        """
+
+        if cls.__name__ == 'Rectangle':
+            instance = cls(1, 1)  # Create a dummy Rectangle instance
+        elif cls.__name__ == 'Square':
+            instance = cls(1)  # Create a dummy Square instance
+
+        instance.update(**dictionary)  # Use the update method to assign attributes
+        return instance
