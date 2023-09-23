@@ -3,6 +3,7 @@
 
 
 import json
+import csv
 
 class Base:
     """Class base is created and has a private attribute.
@@ -100,3 +101,41 @@ class Base:
                 return [cls.create(**data) for data in list_dicts]
         except FileNotFoundError:
             return []
+
+    @classmethod
+    def save_to_file_csv(cls, list_objs):
+        """Serialize and save instances to a CSV file."""
+
+        filename = f"{cls.__name__}.csv"
+
+        with open(filename, 'w', newline='') as file:
+            writer = csv.writer(file)
+            if cls.__name__ == 'Rectangle':
+                for obj in list_objs:
+                    writer.writerow([obj.id, obj.width, obj.height, obj.x, obj.y])
+            elif cls.__name__ == 'Square':
+                for obj in list_objs:
+                    writer.writerow([obj.id, obj.size, obj.x, obj.y])
+
+    @classmethod
+    def load_from_file_csv(cls):
+        """Deserialize and load instances from a CSV file."""
+
+        filename = f"{cls.__name__}.csv"
+        instances = []
+
+        try:
+            with open(filename, 'r', newline='') as file:
+                reader = csv.reader(file)
+                for row in reader:
+                    if cls.__name__ == 'Rectangle':
+                        id, width, height, x, y = map(int, row)
+                        instance = cls(width, height, x, y, id)
+                    elif cls.__name__ == 'Square':
+                        id, size, x, y = map(int, row)
+                        instance = cls(size, x, y, id)
+                    instances.append(instance)
+        except FileNotFoundError:
+            pass
+
+        return instances
