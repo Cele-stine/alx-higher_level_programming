@@ -4,6 +4,7 @@
 
 import json
 import csv
+import turtle
 
 class Base:
     """Class base is created and has a private attribute.
@@ -139,3 +140,44 @@ class Base:
             pass
 
         return instances
+
+    @staticmethod
+    def draw(list_rectangles, list_squares):
+        """Draw rectangles and squares using the Turtle graphics module."""
+        # Initialize the Turtle screen
+        turtle.title("Drawing Rectangles and Squares")
+        screen = turtle.Screen()
+        screen.setup(width=800, height=600)
+        t = turtle.Turtle()
+
+        # Function to draw a rectangle
+        def draw_rectangle(rect):
+            t.penup()
+            t.goto(rect.x, rect.y)
+            t.pendown()
+            for _ in range(2):
+                t.forward(rect.width)
+                t.left(90)
+                t.forward(rect.height)
+                t.left(90)
+
+        # Function to draw a square
+        def draw_square(square):
+            t.penup()
+            t.goto(square.x, square.y)
+            t.pendown()
+            for _ in range(4):
+                t.forward(square.size)
+                t.left(90)
+
+        # Draw rectangles
+        for rect in list_rectangles:
+            draw_rectangle(rect)
+
+        # Draw squares
+        for square in list_squares:
+            draw_square(square)
+
+        # Close the Turtle graphics window on click
+        screen.exitonclick()
+
